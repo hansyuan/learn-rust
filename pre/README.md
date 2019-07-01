@@ -1,6 +1,12 @@
 # Rust learning 
 
-Using https://stevedonovan.github.io/rust-gentle-intro/1-basics.html#arrays-and-slices. 
+### Introduction to Rust
+Using <https://stevedonovan.github.io/rust-gentle-intro/1-basics.html#arrays-and-slices.>
 
-rustc 
+rustc
+
 rustup doc --std
+
+### Project Euler Problems
+
+Project Euler (not started)
