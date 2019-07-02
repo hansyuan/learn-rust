@@ -2,7 +2,7 @@
 
 ## Introduction to Rust
 
-Using <https://stevedonovan.github.io/rust-gentle-intro/1-basics.html#arrays-and-slices.>
+Using <https://stevedonovan.github.io/rust-gentle-intro/1-basics.html#interlude-getting-command-line-arguments.>
 
 rustc
 
