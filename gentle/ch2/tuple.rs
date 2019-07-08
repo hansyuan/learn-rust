@@ -7,3 +7,4 @@ fn main(){
     let new_point = add_points(49.5, -74.3, 2., -4.);
     println!("{:?}", new_point);
 }
+
