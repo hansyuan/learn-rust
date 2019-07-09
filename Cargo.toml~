@@ -1,5 +1,5 @@
 [package]
-name = "learn-rust"
+name = "learn-rust-cargo"
 version = "0.1.0"
 authors = ["Hans Yuan <hansy@surveymonkey.com>"]
 edition = "2018"

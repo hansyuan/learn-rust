@@ -1,26 +1,25 @@
 // Copied from the example
 #[derive(Debug)]
 struct A {
-    s: & 'static str
+    s: &'static str,
 }
 
 // Working from examples
 #[derive(Debug)]
-struct B <'b> {
-    s: & 'b str
+struct B<'b> {
+    s: &'b str,
 }
-
 
 fn makes_b(s_param: &'static str) -> B<'static> {
-    // let s = "waffles and chicken".to_string(); 
-    B { s: & s_param }
+    // let s = "waffles and chicken".to_string();
+    B { s: &s_param }
 }
 
-fn choice(i: i32) -> & 'static str {
+fn choice(i: i32) -> &'static str {
     match i {
-        0 => "zero", 
-        1 => "one", 
-        _ => "many"
+        0 => "zero",
+        1 => "one",
+        _ => "many",
     }
 }
 
@@ -32,9 +31,8 @@ fn main() {
     println!("{:?}", choice(1));
 
     let s = "literal".to_string();
-    let b = B {s: &s} ;
-    println!("{:?}", b); 
+    let b = B { s: &s };
+    println!("{:?}", b);
 
     makes_b("wafflenator");
 }
-
