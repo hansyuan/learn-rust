@@ -5,3 +5,9 @@ authors = ["Hans Yuan <hansy@surveymonkey.com>"]
 edition = "2018"
 
 [dependencies]
+rand = "0.7"
+
+
+[[bin]]
+name = "ch2/binary-trees"
+path = "ch2/binary-trees.rs"
