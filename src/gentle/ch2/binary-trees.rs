@@ -3,19 +3,32 @@ use rand::prelude::*;
 
 // back to cse 130 :D
 
-type MaybeNode = Option<Box<Node>>;
+type MaybeNode<T> = Option<Box<Node<T>>>;
 
-#[derive(Debug)]
-struct Node {
+// #[derive(Debug)]
+struct Node<T> {
     // basic binary tree
-    val: i64,
-    left: MaybeNode,
-    right: MaybeNode,
+    val: T,
+    left: MaybeNode<T>,
+    right: MaybeNode<T>,
 }
 
-impl Node {
+// was trying to make the fmt recursive. i'll come back later.
+impl<T: std::fmt::Display> std::fmt::Debug for Node<T> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        if let Some(ref left) = self.left {
+            println!("{:#?}", left);
+        }
+        write!(f, "{:?}", self.val);
+        if let Some(ref right) = self.right {
+            println!("{:#?}", right);
+        }
+    }
+}
+
+impl<T: PartialOrd> Node<T> {
     // Create a new node with no children
-    fn new(val: i64) -> Node {
+    fn new(val: T) -> Node<T> {
         Node {
             val: val,
             left: None,
@@ -24,20 +37,20 @@ impl Node {
     }
 
     // have a hunch, but not entirely sure
-    fn boxer(node: Node) -> MaybeNode {
+    fn boxer(node: Node<T>) -> MaybeNode<T> {
         Some(Box::new(node))
     }
 
     // setters
-    fn set_left(&mut self, node: Node) {
+    fn set_left(&mut self, node: Node<T>) {
         self.left = Self::boxer(node);
     }
 
-    fn set_right(&mut self, node: Node) {
+    fn set_right(&mut self, node: Node<T>) {
         self.right = Self::boxer(node);
     }
 
-    fn insert(&mut self, val: i64) {
+    fn insert(&mut self, val: T) {
         if val < self.val {
             //Check if there are children
             match self.left {
@@ -59,7 +72,7 @@ impl Node {
             left.traverse();
         }
 
-        println!("{}", self.val);
+        // println!("{}", self.val);
 
         if let Some(ref right) = self.right {
             right.traverse();
