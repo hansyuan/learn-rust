@@ -70,7 +70,7 @@ impl Node {
 fn main() {
     // println!("Hello;");
     let mut rng = rand::thread_rng();
-    let mut root = Node::new(rng.gen::<i64>());
+    let mut root = Node::new(rng.gen_range(10000, 15000));
     // root.set_left(Node::new(2));
     // root.set_right(Node::new(3));
 
@@ -90,7 +90,7 @@ fn main() {
     // root.insert(4);
 
     for _ in 0..13 {
-        root.insert(rng.gen::<i64>());
+        root.insert(rng.gen_range(10000, 15000));
     }
 
     println!("binary-tree:\n{:#?}", root);

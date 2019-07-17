@@ -1,14 +1,50 @@
 binary-tree:
 Node {
-    val: -5135395736195891286,
+    val: 12724,
     left: Some(
         Node {
-            val: -7369600921380815078,
-            left: None,
+            val: 11288,
+            left: Some(
+                Node {
+                    val: 10531,
+                    left: Some(
+                        Node {
+                            val: 10359,
+                            left: None,
+                            right: None,
+                        },
+                    ),
+                    right: Some(
+                        Node {
+                            val: 11054,
+                            left: Some(
+                                Node {
+                                    val: 10729,
+                                    left: None,
+                                    right: None,
+                                },
+                            ),
+                            right: None,
+                        },
+                    ),
+                },
+            ),
             right: Some(
                 Node {
-                    val: -6297587864691948831,
-                    left: None,
+                    val: 11888,
+                    left: Some(
+                        Node {
+                            val: 11863,
+                            left: None,
+                            right: Some(
+                                Node {
+                                    val: 11871,
+                                    left: None,
+                                    right: None,
+                                },
+                            ),
+                        },
+                    ),
                     right: None,
                 },
             ),
@@ -16,65 +52,29 @@ Node {
     ),
     right: Some(
         Node {
-            val: -1347656917870704455,
+            val: 13093,
             left: Some(
                 Node {
-                    val: -2944202040629051955,
+                    val: 13047,
                     left: Some(
                         Node {
-                            val: -3531356158131183428,
+                            val: 13003,
                             left: None,
                             right: None,
                         },
                     ),
-                    right: Some(
-                        Node {
-                            val: -2416392770305767137,
-                            left: None,
-                            right: Some(
-                                Node {
-                                    val: -1761972987852888886,
-                                    left: None,
-                                    right: None,
-                                },
-                            ),
-                        },
-                    ),
+                    right: None,
                 },
             ),
             right: Some(
                 Node {
-                    val: 5952018146183815125,
-                    left: Some(
-                        Node {
-                            val: -1008239103540935481,
-                            left: None,
-                            right: None,
-                        },
-                    ),
+                    val: 13119,
+                    left: None,
                     right: Some(
                         Node {
-                            val: 6708791522540754529,
+                            val: 14519,
                             left: None,
-                            right: Some(
-                                Node {
-                                    val: 6950730301553108667,
-                                    left: None,
-                                    right: Some(
-                                        Node {
-                                            val: 7857240140290219187,
-                                            left: Some(
-                                                Node {
-                                                    val: 7308350936943367392,
-                                                    left: None,
-                                                    right: None,
-                                                },
-                                            ),
-                                            right: None,
-                                        },
-                                    ),
-                                },
-                            ),
+                            right: None,
                         },
                     ),
                 },
@@ -83,17 +83,17 @@ Node {
     ),
 }
 
--7369600921380815078
--6297587864691948831
--5135395736195891286
--3531356158131183428
--2944202040629051955
--2416392770305767137
--1761972987852888886
--1347656917870704455
--1008239103540935481
-5952018146183815125
-6708791522540754529
-6950730301553108667
-7308350936943367392
-7857240140290219187
+10359
+10531
+10729
+11054
+11288
+11863
+11871
+11888
+12724
+13003
+13047
+13093
+13119
+14519
