@@ -1,3 +1,1 @@
-Where I left off?
-
-https://stevedonovan.github.io/rust-gentle-intro/2-structs-enums-lifetimes.html#generic-structs 
+https://stevedonovan.github.io/rust-gentle-intro/3-filesystem.html\#another-look-at-reading-files
