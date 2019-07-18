@@ -5,25 +5,12 @@ use rand::prelude::*;
 
 type MaybeNode<T> = Option<Box<Node<T>>>;
 
-// #[derive(Debug)]
+#[derive(Debug)]
 struct Node<T> {
     // basic binary tree
     val: T,
     left: MaybeNode<T>,
     right: MaybeNode<T>,
-}
-
-// was trying to make the fmt recursive. i'll come back later.
-impl<T: std::fmt::Display> std::fmt::Debug for Node<T> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        if let Some(ref left) = self.left {
-            println!("{:#?}", left);
-        }
-        write!(f, "{:?}", self.val);
-        if let Some(ref right) = self.right {
-            println!("{:#?}", right);
-        }
-    }
 }
 
 impl<T: PartialOrd> Node<T> {
@@ -64,20 +51,6 @@ impl<T: PartialOrd> Node<T> {
             }
         }
     }
-
-    fn traverse(&self) {
-        // left, middle, and then right
-
-        if let Some(ref left) = self.left {
-            left.traverse();
-        }
-
-        // println!("{}", self.val);
-
-        if let Some(ref right) = self.right {
-            right.traverse();
-        }
-    }
 }
 
 fn main() {
@@ -109,7 +82,7 @@ fn main() {
     println!("binary-tree:\n{:#?}", root);
     println!("");
 
-    root.traverse();
+    // root.traverse();
 
     // Apparently some pointers are smart, others need to be explicit.
 }
